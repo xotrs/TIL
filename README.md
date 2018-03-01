@@ -1,6 +1,6 @@
 # Today I Learned
 
-배움을 정리하기 위한 Today I Learned 입니다.
+배움을 정리하기 위한 Today I Learned 입니다.<br>
 아래의 설정은 [milooy](https://github.com/milooy/TIL)님의 TIL을 참고했습니다.
 
 ### gollum 설치
