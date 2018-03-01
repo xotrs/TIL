@@ -1,5 +1,5 @@
 ## after_action 사용법
-controller에서 action이 동작한 후 수행되어야 하는 작업이 있다. after_action을 사용하면 공통된 작업을 수행하고 중복 코드를 줄일 수 있다. <br>아래는 test1, test2에서만 test4를 after_action으로 수행하는 코드를 보여준다.
+controller에서 action이 동작한 후 수행되어야 하는 작업이 있다. after_action을 사용하면 공통된 작업을 수행하고 중복 코드를 줄일 수 있다. <br>아래는 test4를 after_action으로 test1, test2에서만 수행하는 코드를 보여준다.
 
 ```ruby
 class SomeController < ApplicationController
