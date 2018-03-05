@@ -45,5 +45,5 @@ end
 
 default scope에서 지정된 조건식은 개별적으로 order와 where 메서드를 지정해도 취소되지 않는다. 개별적으로 지정된 조건은 order 메서드의 경우 두번째 키 이후로 추가되고, where 메서드의 경우 AND 연산자로 추가된다.
 
-reference
+Reference<br>
 퍼펙트 루비 온 레일즈[제이펍 출판사]
