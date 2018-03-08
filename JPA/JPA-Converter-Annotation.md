@@ -49,7 +49,6 @@ public interface AttributeConverter<X,Y> {
     public X convertToEntityAttribute(Y dbData); // Database to Entity
 }
 ```
-<br>
 ### 클래스 레벨에서 지정하기
 클래스 레벨에서도 설정할 수 있으며, 어떤 필드에 컨버터를 적용할지 명시해야 한다.
 ```java
@@ -69,7 +68,6 @@ public class Member {
     //Getter, Setter
 }
 ```
-<br>
 ### 글로벌 설정
 모든 Boolean 타입에 컨버터를 적용하려면 @Converter(autoApply = true)옵션을 적용하면 된다.
 
