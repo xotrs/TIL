@@ -1,4 +1,4 @@
-### QueryDSL?
+## QueryDSL?
 
 QueryDSL은 오픈소스 프로젝트이다. 처음에는 HQL(Hibernate Query Language)을 코드로 작성할 수 있도록 해주는 프로젝트로 시작해서 지금은 JPA, JDBC, Lucene, 몽고 DB, Hibernate Search 등을 다양하게 지원한다. QueryDSL은 데이터를 조회하는 데 기능이 특화되어 있다.
 
@@ -26,8 +26,6 @@ select m from Member m
 where m.name = ?1
 order by m.name desc
 ```
-<br>
-
 ### 기본 Q 생성
 ```java
 public class Qmember extends EntityPathBase<Member> {
