@@ -52,6 +52,6 @@ public void basic() {
     EntityManager em = emf.createEntityManager();
 
 JPAQuery query = new JPAQuery(em);
-QMember qMember = new QMember("m"); //생성되는 JPQL의 별칭이 m
+QMember qMember = new QMember("m"); // 생성되는 JPQL의 별칭이 m
 List<Member> members = query.from(member).where(member.name.eq("회원1")).orderBy(member.name.desc()).list(member);
 ```
