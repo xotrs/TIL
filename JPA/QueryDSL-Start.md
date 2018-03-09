@@ -42,10 +42,11 @@ QMember qMember = new QMember("m") // 직접 지정
 QMember qMember = QMember.member // 기본 인스턴스 사용
 ```
 
+
 쿼리 타입의 기본 인스턴스를 사용하면 import static을 활용해서 코드를 더 간결하게 작성할 수 있다.
 
 ```java
-import static jpabook.jpashop.domain.Qmember.member //기본 인스턴스
+import static jpabook.jpashop.domain.Qmember.member // 기본 인스턴스
 
 public void basic() {
     EntityManager em = emf.createEntityManager();
