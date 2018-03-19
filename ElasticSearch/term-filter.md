@@ -1,4 +1,4 @@
-# term
+## term
 term은 필드에 지정한 term이 들어있는 도큐먼트와 매칭되며, 용어 분석을 하지 않고 완전히 일치할 때만 매칭된다. 또한 standard_analyzer는 lowercase filter가 적용되기 때문에 텍스트는 소문자여야 하고, 대문자로 입력하면 검색되지 않는다.
 
 ## filter
