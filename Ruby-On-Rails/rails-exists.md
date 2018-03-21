@@ -12,12 +12,14 @@ Client.exists?([1,2,3])
 <br>
 아래의 경우에는 clients 테이블이 비어있으면 false를 리턴하고 그렇지 않은 경우에는 true를 리턴한다.
 <br>
+
 ```ruby
 Client.exists?
 ```
 <br>
 아래의 경우에는 clients 테이블에 first_name이 Ryan인 사람이 하나라도 있으면 true를 리턴하고 그렇지 않으면 false를 리턴한다.
 <br>
+
 ```ruby
 Client.where(:first_name => 'Ryan').exists?
 ```
