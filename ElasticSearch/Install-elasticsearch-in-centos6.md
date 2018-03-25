@@ -3,7 +3,7 @@
 엘라스틱서치는 기본적으로 Java 1.8을 필요로 한다. 기존의 서버에 Java 1.8이 설치되어있어 설명은 생략한다.
 
 ### Import GPG KEY
-```bash
+```shell
 rpm --import https://artifacts.elastic.co/GPG-KEY-elasticsearch
 ```
 
