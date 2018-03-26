@@ -1,3 +1,5 @@
+## 레일즈 low level caching
+
 개발을 하다보면 request cost나 시간이 많이 걸리는 API가 있다. 이 문제는 레일즈의 cache method를 통해서 어느정도 해결할 수 있다. 최신의 데이터를 가지고 있을 때는 query로 데이터를 요청하지 않고 cache를 통해 데이터를 불러 올 수 있다. 그 중에서도 많이 사용하는 write, read, fetch 3개의 method를 간략하게 정리했다.
 
 ### write
