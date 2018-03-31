@@ -11,7 +11,7 @@
 ```vim
 vi /etc/ssh/sshd_config
 
-#Port 22 #22번 포트를 자신이 원하는 포트로 변경
+#Port 22 # 22번 포트를 자신이 원하는 포트로 변경
 
 ```
 
@@ -19,7 +19,7 @@ vi /etc/ssh/sshd_config
 ```vim
 vi /etc/ssh/ssh_config
 
-#Port 22 #22번 포트를 자신이 원하는 포트로 변경
+#Port 22 # 22번 포트를 자신이 원하는 포트로 변경
 
 ```
 
