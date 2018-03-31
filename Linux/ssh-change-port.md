@@ -8,7 +8,7 @@
 
 
 ### sshd_config 파일 포트 변경
-```vim
+```bash
 vi /etc/ssh/sshd_config
 
 #Port 22 # 22번 포트를 자신이 원하는 포트로 변경
@@ -16,7 +16,7 @@ vi /etc/ssh/sshd_config
 ```
 
 ### ssh_config 파일 포트 변경
-```vim
+```bash
 vi /etc/ssh/ssh_config
 
 #Port 22 # 22번 포트를 자신이 원하는 포트로 변경
@@ -24,18 +24,18 @@ vi /etc/ssh/ssh_config
 ```
 
 ### 방화벽 규칙 추가
-```vim
+```bash
 vi /etc/sysconfig/iptables
 
 -A INPUT -m state –state NEW -m tcp -p tcp –dport {포트} -j ACCEPT
 ```
 
 ### ssh 서비스 재시작
-```vim
+```bash
 service sshd restart
 ```
 
 ### 방화벽 서비스 재시작
-```vim
+```bash
 service iptables restart
 ```
