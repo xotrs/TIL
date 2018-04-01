@@ -49,14 +49,14 @@ MySQL 5.7 버전으로 넘어오면서 password validation에 대한 강도가 �
 
 설치가 완료됐다. 하지만 설정이 잘못 되었는지 설치까지는 온전히 진행이 되었으나 로그인이 진행되지 않았다. 그래서 루트의 비밀번호를 재설정했다.
 
-<br>
+
 ## 비밀번호 재설정
 ### MySQL 정지
 
 ```bash
 $ systemctl stop mysqld
 ```
-<br>
+
 ### MySQL 환경 옵션 설정
 
 기존의 솔루션은 mysqld safe를 통해 재설정을 진행하는 것이다. 하지만 MySQL 5.7.6부터 RPM 배포판을 사용해서 설치하는 경우에는 systemd에서 관리를 하기 때문에 mysqld safe가 필요 없어 설치가 되지 않는다. 아래와 같은 환경 옵션을 설정 해준다.
@@ -64,20 +64,20 @@ $ systemctl stop mysqld
 ```bash
 $ systemctl set-environment MYSQLD_OPTS="--skip-grant-tables"
 ```
-<br>
+
 ### MySQL 시작
 
 ```bash
 $ systemctl start mysqld
 ```
-<br>
+
 ### MySQL 로그인
 
 루트의 비밀번호 없이 로그인 가능
 ```bash
 $ mysql -u root
 ```
-<br>
+
 ### 루트 비밀번호 변경
 
 5.7부터 비밀번호 컬럼이 password에서 authentication_string으로 변경됐다.
@@ -87,24 +87,24 @@ mysql> UPDATE mysql.user SET authentication_string = PASSWORD('새로운 비밀�
 mysql> FLUSH PRIVILEGES;
 mysql> exit
 ```
-<br>
+
 ### MySQL 정지
 ```bash
 $ systemctl stop mysqld
 ```
-<br>
+
 ### MySQL 환경 옵션 설정 해제
 
 다음 접속부터는 정상적으로 로그인할 수 있도록 환경 옵션 설정 해제를 한다.
 ```bash
 $ systemctl unset-environment MYSQLD_OPTS
 ```
-<br>
+
 ### MySQL 시작
 ```bash
 $ systemctl start mysqld
 ```
-<br>
+
 ### MySQL 로그인
 ```bash
 $ mysql -u root -p
@@ -121,16 +121,16 @@ You must reset your password using ALTER USER statement before executing this st
 mysql> ALTER USER 'root'@'localhost' IDENTIFIED BY '비밀번호';
 mysql> FLUSH PRIVILEGES;
 ```
-<br>
+
 재설정이 잘 되었다. 다시 한번 쿼리를 날려본다. 그랬더니 또 다음과 같은 메세지를 출력한다.
 ```bash
 Your password does not satisfy the current policy requirements
 ```
-<br>
+
 이번에는 재설정한 비밀번호가 MySQL password validation에 맞지 않는다라는 메세지이다.
 
 기존의 잘 사용하던 비밀번호를 바꾸기 싫어서 나는 password validation을 삭제했다. password validation을 지킬려면 비밀번호를 다시 변경하면 될거같다.
-<br>
+
 ### MySQL 로그인 후 password validation 삭제
 
 ```bash
@@ -142,18 +142,18 @@ mysql> uninstall plugin validate_password;
 ```
 
 삭제하고 다시 해보니 잘 진행된다. 설치는 잘 된거 같고 마지막으로 사용자 추가와 외부 접근 허용 하는 것이 남았다. 루트는 로컬에서만 접속 가능하고 특정 사용자는 외부에서 접속 가능하도록 설정을 했다.
-<br>
+
 ### 사용자 추가
 ```bash
 mysql> create user '사용자'@'localhost' identified by '비밀번호';
 ```
-<br>
+
 ### 권한 부여 
 모든 디비에 어디서든 접속할 수 있는 권한을 줬다. 사실 이러면 루트랑 다를 것도 없는데 최소한의 보안을 위해서 이렇게 진행했다.
 ```bash
 mysql> grant all privileges on *.* to '사용자'@'%';
 ```
-<br>
+
 ### 외부 접속 허용
 
 외부의 MySQL 워크벤치와 같은 툴에서 접속을 가능하게 하기 위해서 아래의 설정을 추가한다.
