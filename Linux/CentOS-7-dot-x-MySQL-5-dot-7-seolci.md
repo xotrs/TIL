@@ -10,27 +10,27 @@ https://dev.mysql.com/downloads/repo/yum/
 ```bash
 $ yum install wget
 ```
-<br>
+
 ### MySQL 다운로드
 ```bash
 $ wget https://dev.mysql.com/get/mysql57-community-release-el7-11.noarch.rpm
 ```
-<br>
+
 ### MySQL 설치
 ```bash
 $ sudo rpm -ivh mysql57-community-release-el7-11.noarch.rpm
 ```
-<br>
+
 ### MySQL 서버 설치
 ```bash
 $ sudo yum install mysql-server
 ```
-<br>
+
 ### 서비스 시작
 ```bash
 $ sudo systemctl start mysqld
 ```
-<br>
+
 MySQL은 루트 로그인이나 샘플 유저와 같이 보안 수준이 낮은 기본 옵션을 변경해주는 보안 스크립트가 포함 되어있다. 
 ### 보안 스크립트 실행
 ```bash
