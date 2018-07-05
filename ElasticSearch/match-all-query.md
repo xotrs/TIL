@@ -32,4 +32,4 @@ GET /bank/_search
   "sort": { "created_at": { "order": "desc" } }
 }
 ```
-query 절이 없어도 잘 동작한다!앞으로는 이렇게 작성하면 될 거 같다.
+query 절이 없어도 잘 동작한다! 앞으로는 이렇게 작성하면 될 거 같다.
