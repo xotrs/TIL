@@ -21,3 +21,15 @@ match_all을 수행하고 created_at 기준 내림차순으로 결과를 정렬�
 - sort : 정렬 지정
 
 from이 지정되지 않으면 기본값은 0이며, size가 지정되지 않으면 기본값은 10이다.
+
+
+### 2018.07.05 추가
+```
+GET /bank/_search
+{
+  "from": 0,
+  "size": 5,
+  "sort": { "created_at": { "order": "desc" } }
+}
+```
+query 절이 없어도 잘 동작한다!앞으로는 이렇게 작성하면 될 거 같다.
